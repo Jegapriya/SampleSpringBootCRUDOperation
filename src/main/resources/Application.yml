@@ -1,0 +1,21 @@
+server:
+  port: 8881
+spring:
+  application:
+    name: CrudOperation
+  datasource:
+    url: jdbc:h2:file:./DB
+  jpa :
+      properties:
+        hibernate:
+          hbm2ddl:
+            auto: update
+  batch:
+     job:
+      enabled: false
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
